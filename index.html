@@ -13,6 +13,21 @@
       padding: 0;
     }
 
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #004d99;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 1.2em;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    
     .container {
       max-width: 900px;
       margin: 40px auto;
@@ -59,13 +74,10 @@
       margin-top: 15px;
     }
 
-    table, th, td {
-      border: 1px solid #ccc;
-    }
-
-    th, td {
-      padding: 10px;
+     th, td {
+      padding: 12px;
       text-align: left;
+      border-bottom: 1px solid #ccc;
     }
 
     .footer {
@@ -75,39 +87,64 @@
       color: #777;
     }
 
-    .team {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
-  margin-top: 20px;
-}
+  tr:hover {
+      background: #f9f9f9;
+    }
 
-.member {
-  text-align: center;
-  width: 180px;
-}
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .member {
+      text-align: center;
+      width: 180px;
+    }
 
 .member img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  margin-bottom: 10px;
-}
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
 
+    .member img:hover {
+      transform: scale(1.1);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 15px;
+      background: #004d99;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #003366;
+    }
+    
   </style>
 </head>
 <body>
+ <div class="header">⚡ Projet PING8 - Conception de tableaux électriques</div>
   <div class="container">
     <h1>⚡ Projet PING8</h1>
-    
-    <div class="subtitle">Etude et conception de tableaux pour installations électriques dans 
+    <div class="divider"></div>
+    <p>Etude et conception de tableaux pour installations électriques dans 
 des bâtiments à usage d’habitation intégrant la fonction 
-SELECTIVITE pour une exploitation plus rationnelle. </div>
+SELECTIVITE pour une exploitation plus rationnelle.</p>
+    
+    <a href="#" class="btn">📥 Télécharger le rapport</a>
+    <a href="#" class="btn">🔍 Voir les schémas</a>
    
-
     <section>
         <h2>📘 Présentation du projet</h2>
         <div class="divider"></div>
@@ -182,24 +219,25 @@ SELECTIVITE pour une exploitation plus rationnelle. </div>
         <div class="divider"></div>
         <p>Projet réalisé par des étudiants en Génie des Systemes Electriques dans le cadre de travaux pratiques. Il combine <em>conception technique</em>, <em>choix de matériel</em> et <em>logique de protection sélective</em>.</p>
         <p>Notre groupe est composé de quatre membres engagés et complémentaires :</p>
-        <div class="team">
-          <div class="member">
-            <img src="Adams.jpg" alt="KABORE Ibrahim Adam’s " />
-            <div><strong>KABORE Ibrahim Adam’s </strong><br/>Chef du ping</div>
-          </div>
-          <div class="member">
-            <img src="Sarah2.jpg" alt="TINDANO Sarah " />
-            <div><strong>TINDANO Sarah </strong><br/></div>
-          </div>
-          <div class="member">
-            <img src="Hector.jpg" alt="BAGUE Niratoun Hector Trefox " />
-            <div><strong>BAGUE Niratoun Hector Trefox </strong><br/></div>
-          </div>
-          <div class="member">
-            <img src="Yacouba.jpg" alt="COMPAORE Yacouba" />
-            <div><strong>COMPAORE Yacouba</strong><br/></div>
-          </div>
-        </div>
+    <div class="team">
+      <div class="member">
+        <img src="Adams.jpg" alt="KABORE Ibrahim Adam’s " />
+        <div><strong>KABORE Ibrahim Adam’s </strong><br/>Chef du ping</div>
+      </div>
+      <div class="member">
+        <img src="Sarah2.jpg" alt="TINDANO Sarah " />
+        <div><strong>TINDANO Sarah </strong></div>
+      </div>
+      <div class="member">
+        <img src="Hector.jpg" alt="BAGUE Niratoun Hector Trefox " />
+        <div><strong>BAGUE Niratoun Hector Trefox </strong></div>
+      </div>
+      <div class="member">
+        <img src="Yacouba.jpg" alt="COMPAORE Yacouba" />
+        <div><strong>COMPAORE Yacouba</strong></div>
+      </div>
+    </div>
+  </div>
       </section>
 
     <section>
